@@ -1,0 +1,13 @@
+Doing I/O bound tasks in the real world
+
+What if you were tasked with doing 3 things
+
+1. Boil some water.
+2. Do some laundry
+3. Send a package via mail
+
+Would you do these 
+
+1. One by one (synchronously)
+2. Context switch between them (Concurrently)
+3. Start all 3 tasks together, and wait for them to finish. The first one that finishes gets catered to first.

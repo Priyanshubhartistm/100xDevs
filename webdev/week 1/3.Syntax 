@@ -1,0 +1,21 @@
+Syntax of Javascript
+
+1. Variables
+
+Variables are used to store data. In JavaScript, you declare variables using `var`, `let`, or `const`.
+
+2. Data types
+
+let number = 42;             // number
+let string = "priya"         // string
+let isactive = false         // boolean
+let number = [1,2,3]         // array
+
+3. Operators
+
+let sum = 10 + 5;          // Arithmetic operator
+let isEqual = (10 === 10); // Comparison operator
+let isTrue = (true && false); // Logical operator
+
+4. Functions
+
