@@ -1,0 +1,28 @@
+Properties of JS       = Every language comes with it’s unique set of features. 
+
+Javascript has the following -
+
+1. Interpreted        =  JavaScript is an interpreted language, meaning it's executed line-by-line at runtime by the JavaScript engine in the browser or server environment, rather than being compiled into machine code beforehand.
+
+Upsides(pros) - There is one less step to do before running your code (very easy steps to run the code)
+
+Downsides(cons) - Performance Overhead, More prone to runtime errors (downside of js performance are slow, its have a lot have compilation  during run time,ofc slow compile,bcz of lots of checks pass )
+
+2. Dynamically Typed   =  Variables in JavaScript are not bound to a specific data type. Types are determined at runtime and can change as the program executes
+means if u want value of a = 2, priyanshu, true anything u can write. thats why js are dynamically language.
+
+C++ Code (won’t compile)      its a statically type.
+JS Code (will compile)        bcz js code are not depend on data types. whatever u want u can write in own code.
+
+3. Single threaded     = JavaScript executes code in a single-threaded environment, meaning it processes one task at a time. We will dive deeper into this next week.
+
+4. Garbage collected   = JavaScript automatically manages memory allocation and deallocation through garbage collection, which helps prevent memory leaks by automatically reclaiming memory used by objects no longer in use.
+
+memory management      = basically apke ram m ave kn si variables ko ave hoan chaiya kn s variables ko ave ni hona chahiya.
+
+
+5. ## Conclusion
+
+Is JS a good language?
+
+Yes and no. It is beginner friendly, but has a lot of performance overhead. **Bun** is trying to solve for a lot of this, but there’s a long way to go before JS can compete with languages like C++/Rust
