@@ -1,0 +1,38 @@
+## Goal of todays class -
+
+1. I/O tasks
+2. Callbacks
+3. Functional arguments
+4. Async vs Sync code
+5. Event loops, callback queues, JS
+
+1. Functional arguments
+
+function sum(a, b) {
+    return a+b;
+}
+function multiply(a, b) {
+  return a * b;
+}
+
+function subtract(a, b) {
+  return a - b;
+}
+
+function divide(a, b) {
+  return a / b;
+}
+
+function doOperation(a, b, op) {
+  return op(a, b)
+}
+
+console.log(doOperation(1, 2, sum))
+
+2. Callbacks
+    
+const fs = require("fs");
+
+fs.readFile("a.txt", "utf-8", function (err, contents) {
+  console.log(contents);
+});
