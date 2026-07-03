@@ -1,0 +1,63 @@
+# Complex types
+
+1. Objects
+
+An object in JavaScript is a collection of `key-value pairs`, where each `key` is a string and each `value` can be any valid JavaScript data type, including another object.
+
+let user = {
+	name: "Harkirat",
+	age: 19
+}
+
+console.log("Harkirats age is " + user.age);
+
+2. Arrays
+
+Arrays let you group data together
+
+const users = ["harkirat", "raman", "diljeet"];
+const tatalUsers = users.length;
+const firstUser = users[0];
+
+3. Array of Objects (array-in-obj.)
+
+We can have more complex objects, for example an array of objects
+
+const users = [{
+		name: "Harkirat",
+		age: 21
+	}, {
+		name: "raman",
+		age: 22
+	}
+]
+
+const user1 = users[0] 
+const user1Age = users[0].age
+
+4. Object of Objects (obj-in obj)
+
+We can have an even more complex object (object of objects)
+means object in a obejct.
+
+const user1 = {
+    name: "priya",
+    age: 21,
+    address: {
+        city: "patna"
+        country: "india",
+        address: "baily road"
+    }
+}
+
+- Assignment #1
+    
+    Write a function that takes a `user` as an input and greets them with their name and age
+
+- Assignment #2
+    
+    Write a function that takes a new object as input which has `name` , `age`  and `gender` and greets the user with their gender (Hi `Mr/Mrs/Others` harkirat, your age is 21)
+
+- Assignment #3
+    
+    Also tell the user if they are legal to vote or not
