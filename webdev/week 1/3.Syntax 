@@ -18,4 +18,53 @@ let isEqual = (10 === 10); // Comparison operator
 let isTrue = (true && false); // Logical operator
 
 4. Functions
+function have one name and () arguments, u can write 1,2 arguments according to u, then {right your logical}
 
+// Function declaration
+function greet(name) {
+    return "Hello , " + name;
+}
+
+// Function call
+let message = greet("john");  // "Hello, John"
+
+
+5. If/Else
+
+if (age >= 18) {
+    console.log("You are an adult.");
+} else {
+    console.log("You are a minor.");
+}
+
+6. Loops
+
+// For loop
+for (let i = 0; i < 5; i++) {
+    console.log(i); // Outputs 0 to 4
+}
+
+// While loop
+let j = 0;
+while (j < 5) {
+    console.log(j); // Outputs 0 to 4
+    j++;
+}
+
+- Assignment #1
+    
+    Write a function `sum` that finds the sum of two numbers. 
+    Side quest - Try passing in a string instead of a number and see what happens?
+    
+- Assignment #2
+    
+    Write a function called `canVote` that returns true or false if the `age` of a user is > 18
+
+
+- Assignment #3
+    
+    Write an if/else statement that checks if a number is even or odd. If it's even, print "The number is even." Otherwise, print "The number is odd."
+
+- Assignment #4
+    
+    Write a function called sum that finds the `sum` from 1 to a number
