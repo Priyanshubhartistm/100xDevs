@@ -1,0 +1,20 @@
+map()
+
+map() runs a function on every item in an array and returns a new array.
+
+Example: double every number.
+
+const numbers = [1, 2, 3, 4];
+const doubledNumbers = numbers.map(number => number * 2);
+console.log(doubledNumbers);
+
+Output:
+[2, 4, 6, 8]
+
+Example: convert names to uppercase.
+
+const students = ["priynshu", "riya", "aman"];
+const upperCaseNames = students.map(name => name.toUpperCase());
+console.log(upperCaseNames);
+
+["PRIYANSHU", "RIYA", "AMAN"]
