@@ -1,0 +1,49 @@
+// filter()
+
+// filter() selects only the items that match a condition and returns them in a new array.
+
+// Example: get only even numbers.
+const numbers = [1, 2, 3, 4, 5, 6];
+const evenNumbers = numbers.filter(number => number % 2 === 0);
+console.log(evenNumbers);
+
+
+Output:
+[2, 4, 6]
+
+Example: get only adult users.
+
+const users = [
+  { name: "Priyanshu", age: 21 },
+  { name: "Riya", age: 17 },
+  { name: "Aman", age: 22 }
+];
+const adults = users.filter(user => user.age >= 18);
+console.log(adults);
+
+output:-
+
+[
+  { name: "Priyanshu", age: 21 },
+  { name: "Aman", age: 22 }
+]
+
+NOTE:- Use filter() when you want to select items based on a condition.
+
+[1, 2, 3, 4, 5, 6] → [2, 4, 6]
+
+
+
+| `map()`                                  | `filter()`                        |
+| ---------------------------------------- | --------------------------------- |
+| Changes every item                       | Selects matching items            |
+| Usually returns the same number of items | Can return fewer items            |
+| Example: double all prices               | Example: select prices above ₹300 |
+
+
+Easy Trick to Remember
+map()    = modify every item
+filter() = select items using a condition
+arrow    = short function syntax
+
+
