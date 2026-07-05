@@ -1,0 +1,95 @@
+Memory Management
+
+Memory management means how a programming language gives memory to a program and removes it when it is no longer needed.
+
+There are mainly three approaches:
+  
+Approach             	    How it works	                                                                            Examples
+Garbage Collector           Language automatically allocates and frees unused memory.	                                Java, JavaScript, Python
+Manual Memory Management	Programmer manually allocates and deallocates memory.	                                    C, C++
+Rust’s Ownership Model	    Rust manages memory automatically using ownership rules, without a garbage collector.       Rust
+
+
+
+1. Garbage Collector
+
+In languages like JavaScript and Java, memory is handled automatically by a Garbage Collector (GC).
+
+The programmer creates variables and objects normally.
+When an object is no longer being used or referenced, the garbage collector identifies it.
+It automatically frees that unused memory.
+This reduces problems such as dangling pointers and many memory leaks.
+But the programmer has less direct control over when memory is freed.
+
+Example languages: Java, JavaScript, Python
+
+let user = { name: "Priyanshu" };
+
+user = null; 
+// The object may later be removed from memory by the Garbage Collector.
+
+
+2. Manual Memory Management
+
+In manual memory management, the programmer is responsible for allocating and freeing memory.
+
+You request memory when needed.
+You must release it after the work is finished.
+If you forget to release memory, it can cause a memory leak.
+If you access memory after freeing it, it can cause a dangling pointer error.
+It gives more control and can be efficient, but it is harder to write safely.
+
+Example language: C, cpp
+
+#include <stdlib.h>
+
+int main() {
+    int *numbers = malloc(5 * sizeof(int)); // Allocate memory
+
+    free(numbers); // Free memory after use
+    return 0;
+}
+// If free(numbers) is not called, the allocated memory may remain occupied even after it is no longer useful.
+
+3. The Rust Way: Ownership Model
+
+Rust uses its own memory management system called the ownership model.
+
+Rust does not use a garbage collector.
+Rust also does not require you to manually call free() like C.
+Every value has one owner.
+When the owner goes out of scope, Rust automatically frees the memory.
+Rust checks ownership and borrowing rules at compile time.
+This makes Rust highly safe against common memory errors.
+
+fn main() {
+    {
+        let name = String::from("Priyanshu");
+        println!("{}", name);
+    } // `name` goes out of scope here, so Rust frees its memory automatically.
+}
+
+Rust prevents many common problems before the program even runs:
+
+Memory leaks in normal code
+Dangling pointers
+Double free errors
+Data races in multithreaded programs
+
+Simple Comparison
+
+| Feature                   | Garbage Collector         | Manual Management     | Rust Ownership     |
+| ------------------------- | ------------------------- | --------------------- | ------------------ |
+| Who frees memory?         | Garbage Collector         | Programmer            | Rust automatically |
+| Garbage Collector needed? | Yes                       | No                    | No                 |
+| Manual `free()` needed?   | No                        | Yes                   | No                 |
+| Memory safety             | Good                      | Depends on programmer | Very high          |
+| Performance overhead      | Can have runtime overhead | Low                   | Low                |
+| Examples                  | Java, JavaScript, Python  | C, C++                | Rust               |
+
+
+Final Conclusion
+
+JavaScript automatically manages memory using a garbage collector. 
+C gives full memory control to the programmer but can cause memory-related bugs if handled incorrectly. 
+Rust provides a middle path: it gives performance similar to C/C++ while using ownership rules to make memory management safe without a garbage collector.
