@@ -25,4 +25,5 @@ memory management      = basically apke ram m ave kn si variables ko ave hoan ch
 
 Is JS a good language?
 
-Yes and no. It is beginner friendly, but has a lot of performance overhead. **Bun** is trying to solve for a lot of this, but there’s a long way to go before JS can compete with languages like C++/Rust
+Yes and no. It is beginner friendly, but has a lot of performance overhead. 
+**Bun** is trying to solve for a lot of this, but there’s a long way to go before JS can compete with languages like C++/Rust
