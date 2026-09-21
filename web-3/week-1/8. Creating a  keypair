@@ -1,0 +1,7 @@
+# Creating a public/private keypair
+
+Let’s look at various ways of creating public/private keypairs, signing messages and verifying them
+
+### **EdDSA -** Edwards-curve Digital Signature Algorithm  - ED25519
+
+ECDSA (Elliptic Curve Digital Signature Algorithm) - secp256k1

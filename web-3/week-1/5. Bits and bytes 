@@ -1,0 +1,13 @@
+# Bits and bytes
+
+### **What is a Bit?**
+
+A bit is the smallest unit of data in a computer and can have one of two values: 0 or 1.
+
+Think of a bit like a light switch that can be either off (0) or on (1). 
+
+### What is a byte?
+
+A byte is a group of `8` bits. It’s the standard unit of data used to represent a single character in memory. Since each bit can be either 0 or 1, a byte can have 2^8 (256) possible values, ranging from 0 to 255
+
+

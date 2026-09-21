@@ -1,0 +1,7 @@
+myPromise
+  .then(result => {
+    console.log(result); // if resolved
+  })
+  .catch(error => {
+    console.log(error); // if rejected
+  });
