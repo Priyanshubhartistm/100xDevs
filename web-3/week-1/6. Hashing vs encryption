@@ -1,0 +1,57 @@
+# Hashing vs encryption
+
+Hashing is one way function. Encryption is two way function.
+
+## Hashing
+
+Hashing is a process of converting data (like a file or a message) into a fixed-size string of characters, which typically appears random. 
+
+Common hashing algorithms - SHA-256, MD5
+
+Differences b/w md5 and sha-256
+
+1. Security (MD5 is not secure)
+2. Output size (MD5 output is 128 bits, SHA-256 output is 256 bits)
+3. Speed (MD5 is faster than SHA-256)
+
+## MD5
+
+- **Output size:** 128 bits (32 hex characters)
+- **Speed:** Very fast
+- **Security:** ❌ **Broken**
+- **Collisions:** Easy to generate (two different inputs with same hash)
+- **Use today:**
+    - ❌ Cryptography
+    - ❌ Password hashing
+    - ⚠️ Only for non-security uses (e.g., quick checksums)
+
+**Status:** Obsolete for security purposes.
+
+---
+
+## SHA-256
+
+- **Output size:** 256 bits (64 hex characters)
+- **Speed:** Slower than MD5 (but still fast)
+- **Security:** ✅ **Strong**
+- **Collisions:** Computationally infeasible with current technology
+- **Use today:**
+    - ✅ Cryptography
+    - ✅ Digital signatures
+    - ✅ Blockchain (Bitcoin)
+
+
+
+## Encryption
+
+Encryption is the process of converting plaintext data into an unreadable format, called ciphertext, using a specific algorithm and a key. The data can be decrypted back to its original form only with the appropriate key.
+
+**Key Characteristics:**
+
+- **Reversible**: With the correct key, the ciphertext can be decrypted back to plaintext.
+- **Key-dependent**: The security of encryption relies on the secrecy of the key.
+- **Two main types**:
+    - **Symmetric encryption**: The same key is used for both encryption and decryption.
+    - **Asymmetric encryption**: Different keys are used for encryption (public key) and decryption (private key).
+
+
