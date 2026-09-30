@@ -39,6 +39,7 @@ Problems with current approach
     
     **What actually happens**
     
+    
     Say miners A and B both find valid blocks at roughly the same height. Some nodes will hear about block A first, others will hear about block B first. Each node considers the first valid block it receives as the current tip of the chain and starts building on that. So now you briefly have two competing versions of the blockchain, each with a portion of the network working on it.
     
     **How it resolves**
