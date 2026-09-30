@@ -1,0 +1,10 @@
+How would you create a decentralized blockchain/currency?
+
+1. Write a program (./bitcoin_miner.exe) that people can run on their machine to become `miners` of the network
+2. Write code in the program that dictates how the currency is minted (new currency is created) and who gets the initial supply (developers, initial investors, airdrop)
+3. Let anyone join the network/be a miner by running the program (bitcoin_miner.exe)
+4. If people want to send BTC/receive BTC, they should create a `public private keypair`  (no username password like banks)
+5. To send BTC from your wallet (your public key) to a different wallet, `sign a transaction/message` and send the transaction to one/many miners (btc-miner-india.100xdevs.com)
+6. Miners bundle multiple transactions (lets say all txns that came in the last 10s) in a block. The block is transmitted by the miner to everyone else in the network. This creates a permanent record/ledger of all the blocks since the starting (genesis). 
+7. A chain of these blocks is called the blockchain.
+
