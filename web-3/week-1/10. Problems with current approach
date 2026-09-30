@@ -1,0 +1,61 @@
+Problems with current approach
+
+
+1. Can a miner move money from one random address to another?
+    
+    No, only the user who holds the private key can sign the transaction. So even if a miner tries to `mimic` a transaction, other miners will reject the transaction signature.
+
+2. Which miner should I send my transaction to?
+    
+    When you hit "send" in your wallet, your transaction gets broadcast to whichever Bitcoin nodes your wallet is connected to. From there, it propagates across the entire network through a gossip protocol—each node that receives your transaction validates it and forwards it to the other nodes it's connected to. Within seconds, your transaction typically reaches most nodes on the network, including those run by miners.
+
+3. What if a miner doesnt include my transaction?
+    
+    It can happen. There can be blacklists/less incentive for a miner to include ur txn. That is why the concept of `tipping` exists
+
+- Why would a person start a new miner? What do they get?
+    
+    When you propose a block, you add a txn to the top that gives you the block reward. This is how new BTC is added to the system. You can also earn tips based on who wants their txn to be included the fastest.
+    
+    **1. Block subsidy (the "block reward")**
+    
+    This is newly created bitcoin that gets awarded to whoever mines a valid block. It started at 50 BTC per block in 2009 and halves roughly every four years (every 210,000 blocks). Currently it's 3.125 BTC per block after the April 2024 halving. This subsidy is how all new bitcoin enters circulation.
+    
+    **2. Transaction fees**
+    
+    Every transaction in the block includes a fee paid by the sender. The miner who finds the block collects all the fees from every transaction they included. When the mempool is congested, fees can add up to a meaningful amount—sometimes rivaling or even exceeding the block subsidy during periods of high demand.
+
+- Why wouldnt a miner always start to propose a block then? I would want to keep all the block reward for myself. I’ll just start a new miner and start proposing blocks every 1 minute.
+    
+    To be able to propose a block, you need to solve a `cryptographically hard` problem. 
+    If there are 100 miners right now all having 4 cpus, they are all solving the same problem. 
+    On average you will only be able to propose a block once in 100 blocks (simple probability).
+    
+    This is why people say BTC/crypto is bad for the environment because thousands of machines all around the world are solving the same futile problem just to be the `block leader`
+
+- What if two people propose a block at the same time?
+    
+    This happens occasionally and is totally normal—it's called a **chain split** or **temporary fork**.
+    
+    **What actually happens**
+    
+    Say miners A and B both find valid blocks at roughly the same height. Some nodes will hear about block A first, others will hear about block B first. Each node considers the first valid block it receives as the current tip of the chain and starts building on that. So now you briefly have two competing versions of the blockchain, each with a portion of the network working on it.
+    
+    **How it resolves**
+    
+    The rule is simple: the longest chain wins (technically, the chain with the most cumulative proof-of-work). As soon as another block gets mined on top of either A or B, that chain becomes longer. Nodes following the shorter chain will immediately abandon it and switch to the longer one. The "orphaned" block gets discarded—its transactions return to the mempool to be included in a future block.
+    
+    **Implications**
+    
+    This is why people wait for "confirmations" before considering a transaction final. One confirmation means it's in a block, but that block could still get orphaned. Six confirmations has become the informal standard for high-value transactions—at that depth, a reorg is extraordinarily unlikely without a deliberate 51% attack.
+
+
+- How to forks get resolved?
+    
+    Eventually one fork will start to become longer, and broadcast this fork to the miners currently maintaining the other fork. The other miners will then accept the longer fork and discard their original fork. This happens automatically and rarely does a fork sustain for more than a few hours
+
+Can a transaction ever be reversed? Can you ever create a new fork that doesnt have a transaction that you want removed from the blockchain?
+
+
+A blocks nonce is generated with the txn signature of the prev block attached. You will have to compete with everyone else creating the longest chain while you try your best to create a fork.
+
